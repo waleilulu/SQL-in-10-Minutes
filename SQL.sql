@@ -3,21 +3,26 @@ use NORTHWND
 --CH2.
 SELECT  [SupplierID] FROM Products
 
-SELECT DISTINCT [SupplierID] FROM Products --é‡è¤‡çš„åªç®—ä¸€æ¬¡
+SELECT DISTINCT [SupplierID] FROM Products --­«½Æªº¥uºâ¤@¦¸
 
-SELECT TOP 5 [SupplierID] FROM Products --åªå¸¶å‡ºå‰é¢5è¡Œ
+SELECT TOP 5 [SupplierID] FROM Products --¥u±a¥X«e­±5¦æ
 
-/*è¨»è§£*/
+/*µù¸Ñ*/
 
 --CH3.
 SELECT [ProductName], [SupplierID], [UnitPrice] FROM Products ORDER BY [SupplierID]
 SELECT [ProductName], [SupplierID], [UnitPrice] FROM Products ORDER BY [ProductName]
-SELECT [ProductName], [SupplierID], [UnitPrice] FROM Products ORDER BY [UnitPrice], [SupplierID] --ä»¥UnitPriceç‚ºé¦–æ’åºï¼Œä¸€æ¨£çš„æ™‚å€™ï¼Œå¦‚æœä¸€æ¨£æ‰¾SupplierIDæ’åº
+SELECT [ProductName], [SupplierID], [UnitPrice] FROM Products ORDER BY [UnitPrice], [SupplierID] --¥HUnitPrice¬°­º±Æ§Ç¡A¤@¼Ëªº®É­Ô¡A¦pªG¤@¼Ë§äSupplierID±Æ§Ç
 
 SELECT [ProductName], [SupplierID], [UnitPrice] FROM Products
-SELECT [ProductName], [SupplierID], [UnitPrice] FROM Products  ORDER BY 3,2  --ä»¥ç¬¬ä¸‰æ¬„UnitPriceæ’åºç‚ºé¦–ï¼Œå¦‚æœä¸€æ¨£æ‰¾ç¬¬äºŒæ¬„SupplierIDæ’åº
+SELECT [ProductName], [SupplierID], [UnitPrice] FROM Products  ORDER BY 3,2  --¥H²Ä¤TÄæUnitPrice±Æ§Ç¬°­º¡A¦pªG¤@¼Ë§ä²Ä¤GÄæSupplierID±Æ§Ç
 
-SELECT [ProductID], [UnitPrice], [ProductName] FROM Products ORDER BY UnitPrice --é»˜èªå‡å†ª
-SELECT [ProductID], [UnitPrice], [ProductName] FROM Products ORDER BY UnitPrice DESC --åŠ ä¸ŠDESCç‚ºé™å†ª
+SELECT [ProductID], [UnitPrice], [ProductName] FROM Products ORDER BY UnitPrice --Àq»{¤É¾­
+SELECT [ProductID], [UnitPrice], [ProductName] FROM Products ORDER BY UnitPrice DESC --¥[¤WDESC¬°­°¾­
 
-SELECT [ProductID], [UnitPrice], [ProductName] FROM Products ORDER BY UnitPrice DESC, ProductName --é¦–æ’åºUnitPriceç‚ºé™å†ªï¼Œæ¬¡æ’åºé»˜èªå‡å†ª
+SELECT [ProductID], [UnitPrice], [ProductName] FROM Products ORDER BY UnitPrice DESC, ProductName --­º±Æ§ÇUnitPrice¬°­°¾­¡A¦¸±Æ§ÇÀq»{¤É¾­
+
+--CH4.
+SELECT [ProductID], [ProductName], [UnitPrice] FROM Products  WHERE UnitPrice = 11 
+SELECT [ProductID], [ProductName], [UnitPrice] FROM Products  WHERE UnitPrice = 11 ORDER BY [ProductName] --¦P®É¨Ï¥ÎWHERE¸òORDER BY¡AORDER BY­n©ñ«á­±
+SELECT [ProductID], [ProductName], [UnitPrice] FROM Products  WHERE UnitPrice < 25 ORDER BY UnitPrice DESC
